@@ -66,9 +66,9 @@ fetch('data/pokemon.json')
 
             <h2>#${pokemon.num} ${pokemon.name}</h2>
 
-            <img
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.num}.png"
-            width="250">
+           <img
+src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${parseInt(pokemon.num)}.png"
+width="250">
 
             <h3>Drops</h3>
             <p>${pokemon.drops || "Sin drops"}</p>
@@ -106,9 +106,9 @@ fetch('data/pokemon.json')
 
             card.innerHTML = `
 
-                <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.num}.png"
-                width="180">
+            <img
+src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${parseInt(p.num)}.png"
+width="180">
 
                 <h3>#${p.num} ${p.name}</h3>
 
