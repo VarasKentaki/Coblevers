@@ -1,1 +1,11 @@
-body{margin:0;font-family:Segoe UI,sans-serif;background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);color:#fff}header{padding:20px;text-align:center;position:sticky;top:0;background:rgba(0,0,0,.4);backdrop-filter:blur(10px)}.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}input,select{padding:12px;border-radius:12px;border:none}.stats{display:flex;gap:10px;justify-content:center;padding:15px}.stats div,.card{background:rgba(255,255,255,.08);padding:12px;border-radius:14px}#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;padding:20px}.card{text-align:center;transition:.3s}.card:hover{transform:translateY(-5px);box-shadow:0 0 20px #3b82f6}.pokemon-img{width:180px;height:180px;object-fit:contain}.btn{padding:8px 12px;border:none;border-radius:8px}.hidden{display:none}#modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center}#modal.hidden{display:none}.content{background:#111827;padding:20px;border-radius:16px;max-width:700px;width:90%}
+
+body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#0F172A,#1E293B,#312E81);color:white;margin:0}
+header{padding:20px;text-align:center;position:sticky;top:0;background:rgba(0,0,0,.4);backdrop-filter:blur(10px)}
+#search{padding:12px;width:min(600px,90%);border-radius:12px;border:none}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;padding:20px}
+.card{background:rgba(255,255,255,.08);padding:15px;border-radius:18px;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.card img{width:180px;height:180px;object-fit:contain}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center}
+.hidden{display:none!important}
+.modal-content{background:#111827;padding:20px;border-radius:16px;max-width:700px;width:90%}

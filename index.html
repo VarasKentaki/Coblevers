@@ -1,7 +1,27 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cobbleverse Wiki Pro</title><link rel="stylesheet" href="css/style.css"></head><body>
-<header><h1>⚡ Cobbleverse Wiki Pro</h1><p>Pokédex avanzada de drops</p>
-<div class="controls"><input id="search" placeholder="Buscar nombre, drop o número"><select id="sort"><option value="num">Pokédex</option><option value="name">Nombre</option></select></div></header>
-<section class="stats"><div id="totalPokemon"></div><div id="totalDrops"></div></section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cobbleverse Dex Pro</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>⚡ Cobbleverse Dex Pro</h1>
+<input id="search" placeholder="Buscar Pokémon, número o drop...">
+</header>
+<main>
 <div id="grid"></div>
-<div id="modal" class="hidden"><div class="content"><button id="close">✖</button><div id="modalBody"></div></div></div>
-<script src="js/app.js"></script></body></html>
+</main>
+
+<div id="modal" class="hidden">
+<div class="modal-content">
+<button id="close">✖</button>
+<div id="modalBody"></div>
+</div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
