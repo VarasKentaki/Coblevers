@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparador Pokémon</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      header {
+        position: static;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>⚔ Comparador Pokémon</h1>
+
+      <p>Compara drops y características de dos Pokémon.</p>
+
+      <a href="index.html" class="btn"> ⬅ Volver </a>
+    </header>
+
+    <main style="padding: 20px">
+      <div class="controls">
+        <select id="poke1"></select>
+
+        <select id="poke2"></select>
+
+        <button id="compareBtn" class="btn">Comparar</button>
+      </div>
+
+      <div id="result"></div>
+    </main>
+
+    <script>
+      function sprite(num) {
+        return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png`;
+      }
+
+      fetch('data/pokemon.json')
+        .then((r) => r.json())
+        .then((data) => {
+          const poke1 = document.getElementById('poke1');
+          const poke2 = document.getElementById('poke2');
+
+          data.forEach((p) => {
+            const option1 = document.createElement('option');
+            option1.value = p.num;
+            option1.textContent = `#${p.num} ${p.name}`;
+
+            const option2 = option1.cloneNode(true);
+
+            poke1.appendChild(option1);
+            poke2.appendChild(option2);
+          });
+
+          document.getElementById('compareBtn').click();
+
+          document.getElementById('compareBtn').onclick = () => {
+            const p1 = data.find((p) => p.num == poke1.value);
+
+            const p2 = data.find((p) => p.num == poke2.value);
+
+            document.getElementById('result').innerHTML = `
+
+        <div class="compare-pokemon">
+
+            <div class="compare-card">
+
+                <img
+                src="${sprite(p1.num)}"
+                alt="${p1.name}">
+
+                <h2>${p1.name}</h2>
+
+                <p>#${p1.num}</p>
+
+                <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="${p1.pokedex_url}">
+                Pokédex
+                </a>
+
+            </div>
+
+            <div class="vs">
+                VS
+            </div>
+
+            <div class="compare-card">
+
+                <img
+                src="${sprite(p2.num)}"
+                alt="${p2.name}">
+
+                <h2>${p2.name}</h2>
+
+                <p>#${p2.num}</p>
+
+                <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="${p2.pokedex_url}">
+                Pokédex
+                </a>
+
+            </div>
+
+        </div>
+
+        <table class="compare-table">
+
+            <tr>
+                <th>Característica</th>
+                <th>${p1.name}</th>
+                <th>${p2.name}</th>
+            </tr>
+
+            <tr>
+                <td>Número</td>
+                <td>${p1.num}</td>
+                <td>${p2.num}</td>
+            </tr>
+
+            <tr>
+                <td>Drops</td>
+                <td>${p1.drops_es || p1.drops || 'Sin datos'}</td>
+                <td>${p2.drops_es || p2.drops || 'Sin datos'}</td>
+            </tr>
+
+            <tr>
+                <td>Especial</td>
+                <td>${p1.special_es || p1.special || 'Ninguno'}</td>
+                <td>${p2.special_es || p2.special || 'Ninguno'}</td>
+            </tr>
+
+        </table>
+
+        `;
+          };
+        });
+    </script>
+  </body>
+</html>

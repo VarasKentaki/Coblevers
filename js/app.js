@@ -35,11 +35,9 @@ fetch("data/pokemon.json")
     ).textContent =
         `${drops.size} Drops`;
 
-    function sprite(num){
-
-        return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png`;
-
-    }
+function sprite(num){
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png`;
+}
 
     function render(){
 
@@ -205,6 +203,7 @@ fetch("data/pokemon.json")
                         <a
                         class="btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="${p.pokedex_url}">
                             Abrir Cobblemon Tools
                         </a>

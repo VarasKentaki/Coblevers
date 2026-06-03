@@ -215,3 +215,92 @@ select {
 
   pointer-events: auto;
 }
+.footer {
+  margin-top: 50px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 8px 0;
+}
+
+.footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  text-align: left;
+}
+
+.compare-table th {
+  font-weight: bold;
+}
+.compare-pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.compare-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 280px;
+}
+
+.compare-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.compare-card h2 {
+  margin: 10px 0;
+}
+
+.vs {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px;
+}
+
+.compare-table th {
+  background: rgba(255, 255, 255, 0.08);
+}
